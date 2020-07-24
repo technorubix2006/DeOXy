@@ -8,7 +8,6 @@
 #OpenSource
 
 from telethon import events
-
 import asyncio
 
 from uniborg.util import admin_cmd
@@ -32,9 +31,8 @@ async def _(event):
     if input_str == "hackallph":
 
         await event.edit(input_str)
-
-        animation_chars = [
         
+        animation_chars = [
             "`Connecting To DarkWeb.ONION...`",
             "`Successful!`",
             "`Connected 69.669.699.96`",

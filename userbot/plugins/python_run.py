@@ -1,12 +1,20 @@
+"""Evaluate Python Code inside Telegram
+Syntax: .py PythonCode"""
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 from telethon import events, errors, functions, types
 import inspect
 import traceback
 import asyncio
 import sys
 import io
+from uniborg.util import admin_cmd
 
 
-@command(pattern="^.exec")
+@borg.on(admin_cmd("py", allow_sudo=True))
+@borg.on(admin_cmd("py"))
 async def _(event):
     if event.fwd_from:
         return
@@ -42,17 +50,17 @@ async def _(event):
     else:
         evaluation = "Success"
 
-    final_output = "**EXEC**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
+    final_output = "**EVAL**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
 
-    if len(final_output) > 4096:
+    if len(final_output) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(final_output)) as out_file:
             out_file.name = "eval.text"
-            await bot.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
                 allow_cache=False,
-                caption=f"**PROCCESSED**: `{cmd}`",
+                caption=cmd,
                 reply_to=reply_to_id
             )
             await event.delete()

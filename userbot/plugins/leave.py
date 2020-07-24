@@ -11,7 +11,7 @@ import time
 
 MODULE_LIST.append("leave")
 
-@borg.on(admin_cmd("bye", outgoing=True))
+@borg.on(admin_cmd("leave", outgoing=True))
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`Chat Leave Request Proceeded`")
@@ -23,10 +23,10 @@ async def leave(e):
 
 
 SYNTAX.update({
-    "Leave": f"\
+    "leave": f"\
 **Requested Module --> Chat Leaver**\
 \n\nDetailed usage of fuction(s):\
-\n\n```.Leave```\
+\n\n```.leave```\
 \nUsage: Leaves The Current Chat/Group.\
 "
 })            
