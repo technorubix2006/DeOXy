@@ -55,7 +55,7 @@ async def _(event):
             "`Adding Modules... 84%\n█████████████████████▒▒▒▒ `",
             "`Adding Finishing Touches... 96%\n████████████████████████▒`",
             "`HACKED 100%\n█████████████████████████ `",
-            "`Targeted PH: All Accounts Hacked. ×_× Hacked Successfully...`\n__Targeted account is under Boss' control now__\n\n**Pay 50$ To** @CyberJalagam **Or Get Ready To See Your E-Mail and YouTube Channel Spamming Everywhere.**" 
+            "`Targeted PH: All Accounts Hacked. ×_× Hacked Successfully...`\n__Targeted account is under Boss' control now__\n\n**Pay 50$ To** @TECHNORUBIX**Or Get Ready To See Your E-Mail and YouTube Channel Spamming Everywhere.**" 
        
         
         
