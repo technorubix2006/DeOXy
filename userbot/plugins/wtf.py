@@ -20,11 +20,11 @@ async def _(event):
     if input_str == "wtf":
         await event.edit(input_str)
         animation_chars = [
-            "What",
-            "What The",
-            "What The F",
-            "What The Fuck",
-            "Wtf"
+            "**Bruh**",
+            "**Bruh __What__",
+            "**Bruh** __What The__",
+            "**Bruh** __What The F__",
+            "**Bruh** __What The F ?!__"
         ]
 
         for i in animation_ttl:
