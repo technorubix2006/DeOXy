@@ -21,7 +21,7 @@ async def _(event):
         await event.edit(input_str)
         animation_chars = [
             "**Bruh**",
-            "**Bruh __What__",
+            "**Bruh** __What__",
             "**Bruh** __What The__",
             "**Bruh** __What The F__",
             "**Bruh** __What The F ?!__"
